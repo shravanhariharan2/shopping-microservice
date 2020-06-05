@@ -1,4 +1,4 @@
 FROM openjdk:11
-ADD target/item-service.jar item-service.jar
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "item-service.jar"]
+ADD target/user-service.jar user-service.jar
+EXPOSE 8083
+ENTRYPOINT ["java", "-jar", "user-service.jar"]

@@ -1,1 +1,18 @@
-# TODO: configure docker
+version: "3.7"
+
+services:
+  item-service:
+    restart: always
+    build: ./item-service
+    ports:
+      - 8081:8081
+  order-service:
+    restart: always
+    build: ./order-service
+    ports:
+      - 8082:8082
+  user-service:
+    restart: always
+    build: ./user-service
+    ports:
+      - 8083:8083
