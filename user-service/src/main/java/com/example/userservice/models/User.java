@@ -1,12 +1,16 @@
 package com.example.userservice.models;
 
+import java.util.List;
+
 public class User {
   private String username;
   private int points;
+  private List<Order> orders;
 
-  public User(String username, int points) {
+  public User(String username, int points, List<Order> orders) {
     this.username = username;
     this.points = points;
+    this.orders = orders;
   }
 
   public String getUsername() {
@@ -23,6 +27,14 @@ public class User {
 
   public void setPoints(int points) {
     this.points = points;
+  }
+
+  public List<Order> getOrders() {
+    return orders;
+  }
+
+  public void setOrders(List<Order> orders) {
+    this.orders = orders;
   }
   
 }
