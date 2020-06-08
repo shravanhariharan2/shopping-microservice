@@ -16,3 +16,8 @@ services:
     build: ./user-service
     ports:
       - 8083:8083
+  discovery-server:
+    restart: always
+    build: ./discovery-server
+    ports:
+      - 8761:8761
