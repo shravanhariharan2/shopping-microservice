@@ -8,6 +8,8 @@ public class Order {
   private List<Item> items;
   private String dateOrdered;
 
+  public Order() {}
+
   public Order(int totalPrice, String userId, List<Item> items, String dateOrdered) {
     this.totalPrice = totalPrice;
     this.userId = userId;

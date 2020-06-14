@@ -24,7 +24,7 @@ public class UserController {
   public List<User> getUsers() {
     Order order = webClientBuilder.build()
           .get()
-          .uri("http://localhost:8082/api/orders/1")
+          .uri("http://order-service/api/orders/1")
           .retrieve()
           .bodyToMono(Order.class)
           .block();
