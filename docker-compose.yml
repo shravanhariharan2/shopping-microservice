@@ -6,16 +6,22 @@ services:
     build: ./item-service
     ports:
       - 8081:8081
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-server:8761/
   order-service:
     restart: always
     build: ./order-service
     ports:
       - 8082:8082
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-server:8761/eureka
   user-service:
     restart: always
     build: ./user-service
     ports:
       - 8083:8083
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-server:8761/eureka
   discovery-server:
     restart: always
     build: ./discovery-server
