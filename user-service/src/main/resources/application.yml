@@ -5,7 +5,8 @@ spring:
   application:
     name: user-service
   datasource:
-    url:
-    username: 
-    password: 
-    driver-class-name: 
+    platform: postgres
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}
+    username: ${DB_USER} 
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
