@@ -27,3 +27,12 @@ services:
     build: ./discovery-server
     ports:
       - 8761:8761
+  database:
+    restart: always
+    image: postgres:12.2
+    ports:
+        - ${DB_PORT}:5432
+    environment:
+        POSTGRES_DB: ${DB_DATABASE}
+        POSTGRES_USER: ${DB_USER}
+        POSTGRES_PASSWORD: ${DB_PASSWORD}
