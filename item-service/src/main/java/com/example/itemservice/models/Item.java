@@ -13,13 +13,14 @@ public class Item {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  
   private String name;
+  private String description;
   private int price;
   private int quantity;
 
-  public Item(String name, int price, int quantity) {
+  public Item(String name, String description, int price, int quantity) {
     this.name = name;
+    this.description = description;
     this.price = price;
     this.quantity = quantity;
   }
@@ -46,6 +47,14 @@ public class Item {
 
   public void setQuantity(int quantity) {
     this.quantity = quantity;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
   
 }

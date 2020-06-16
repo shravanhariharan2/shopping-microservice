@@ -18,7 +18,7 @@ public class ItemController {
   @GetMapping("/")
   public List<Item> getItems() {
     return Collections.singletonList(
-      new Item("foo", 20, 2)
+      new Item("foo", "a piece of foo", 20, 2)
     );
   }
 
