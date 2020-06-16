@@ -23,7 +23,7 @@ public class ItemController {
 
   @GetMapping("/")
   public List<Item> getItems() {
-    return repository.find();
+    return repository.findAll();
   }
 
   @GetMapping("/{id}")

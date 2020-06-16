@@ -18,6 +18,8 @@ public class Item {
   private int price;
   private int quantity;
 
+  public Item() {}
+
   public Item(String name, String description, int price, int quantity) {
     this.name = name;
     this.description = description;
