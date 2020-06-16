@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +19,8 @@ public class User {
   
   private String username;
   private int points;
+
+  @OneToMany(mappedBy = "id")
   private List<Order> orders;
 
   public User(String username, int points, List<Order> orders) {
