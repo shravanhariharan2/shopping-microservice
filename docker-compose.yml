@@ -27,12 +27,33 @@ services:
     build: ./discovery-server
     ports:
       - 8761:8761
-  database:
+  
+  user-database:
     restart: always
     image: postgres:12.2
     ports:
-        - ${DB_PORT}:5432
+        - ${USER_DB_PORT}:5432
     environment:
-        POSTGRES_DB: ${DB_DATABASE}
-        POSTGRES_USER: ${DB_USER}
-        POSTGRES_PASSWORD: ${DB_PASSWORD}
+        POSTGRES_DB: ${USER_DB_DATABASE}
+        POSTGRES_USER: ${USER_DB_USER}
+        POSTGRES_PASSWORD: ${USER_DB_PASSWORD}
+        
+  order-database:
+    restart: always
+    image: postgres:12.2
+    ports:
+        - ${ORDER_DB_PORT}:5432
+    environment:
+        POSTGRES_DB: ${ORDER_DB_DATABASE}
+        POSTGRES_USER: ${ORDER_DB_USER}
+        POSTGRES_PASSWORD: ${ORDER_DB_PASSWORD}
+
+  item-database:
+    restart: always
+    image: postgres:12.2
+    ports:
+        - ${ITEM_DB_PORT}:5432
+    environment:
+        POSTGRES_DB: ${ITEM_DB_DATABASE}
+        POSTGRES_USER: ${ITEM_DB_USER}
+        POSTGRES_PASSWORD: ${ITEM_DB_PASSWORD}
