@@ -1,7 +1,5 @@
 package com.example.orderservice.models;
 
-import org.apache.catalina.User;
-
 public class OrderResponse {
   private Long id;
   private User customer;

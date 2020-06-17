@@ -1,4 +1,4 @@
-package com.example.orderservice.models;
+package com.example.itemservice.models;
 
 public class ItemReference {
   private Long itemId;

@@ -23,6 +23,10 @@ public class Order {
     this.dateOrdered = dateOrdered;
   }
 
+  public Long getId() {
+    return id;
+  }
+
   public int getTotalPrice() {
     return totalPrice;
   }
