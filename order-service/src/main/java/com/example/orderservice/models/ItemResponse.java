@@ -5,6 +5,8 @@ import java.util.List;
 public class ItemResponse {
   private List<Item> items;
 
+  public ItemResponse () {}
+
   public ItemResponse(List<Item> items) {
     this.items = items;
   }

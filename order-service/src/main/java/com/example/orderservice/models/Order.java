@@ -17,6 +17,8 @@ public class Order {
   private String userId;
   private String dateOrdered;
 
+  public Order() {}
+
   public Order(int totalPrice, String userId, String dateOrdered) {
     this.totalPrice = totalPrice;
     this.userId = userId;

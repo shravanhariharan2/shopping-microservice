@@ -6,6 +6,8 @@ public class OrderResponse {
   private String createdAt;
   private Item[] items;
 
+  public OrderResponse() {}
+
   public OrderResponse(Long id, User customer, String createdAt, Item[] items) {
     this.id = id;
     this.customer = customer;

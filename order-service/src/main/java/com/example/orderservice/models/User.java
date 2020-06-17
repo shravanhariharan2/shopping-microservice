@@ -7,6 +7,8 @@ public class User {
   private String address;
   private int points;
 
+  public User() {}
+
   public User(String email, String firstName, String lastName, String address, int points) {
     this.email = email;
     this.firstName = firstName;

@@ -4,6 +4,8 @@ public class ItemReference {
   private Long itemId;
   private int quantity;
 
+  public ItemReference() {}
+
   public ItemReference(Long itemId, int quantity) {
     this.itemId = itemId;
     this.quantity = quantity;

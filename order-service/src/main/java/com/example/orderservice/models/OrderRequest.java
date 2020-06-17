@@ -4,6 +4,8 @@ public class OrderRequest {
   private String userId;
   private ItemReference[] items;
 
+  public OrderRequest() {}
+
   public OrderRequest(String userId, ItemReference[] items) {
     this.userId = userId;
     this.items = items;
