@@ -8,5 +8,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface OrderRepository extends CrudRepository<Order, Long> {
   List<Order> findAll();
-  List<Order> findAllByuserId();
+  List<Order> findAllByuserId(Long userId);
 }
